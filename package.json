@@ -1,0 +1,21 @@
+{
+  "name": "ember",
+  "version": "0.0.1",
+  "description": "static blog for keen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "static",
+    "blog"
+  ],
+  "author": "KeenZhang",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^0.12.2"
+  },
+  "devDependencies": {
+    "less": "^1.7.5"
+  }
+}
