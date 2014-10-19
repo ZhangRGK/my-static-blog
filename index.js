@@ -1,4 +1,5 @@
 var koa = require('koa');
+var router = require('koa-router');
 var app = koa();
 
 // logger
@@ -9,7 +10,9 @@ app.use(function *(next) {
     console.log('%s - %s %s - %s ms', this.status,this.method, this.url, ms)
 });
 
-app.use(function *(){
+app.use(router(app));
+
+app.get('/', function *() {
     this.body = 'Hello World';
 });
 
