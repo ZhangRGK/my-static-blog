@@ -1,0 +1,9 @@
+extends layout
+block linkcss
+    link(rel="stylesheet",href="/bower_components/google-code-prettify/styles/desert.css")
+block content
+    #content
+        | !{content}
+block jsfile
+    script(src="/bower_components/google-code-prettify/bin/prettify.min.js")
+    script(src="/public/js/content.js")

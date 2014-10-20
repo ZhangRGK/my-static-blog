@@ -14,7 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^0.12.2",
-    "koa-router": "^3.4.0"
+    "koa-error": "^1.1.2",
+    "koa-jade": "^0.3.1",
+    "koa-router": "^3.4.0",
+    "marked": "^0.3.2"
   },
   "devDependencies": {
     "less": "^1.7.5"
