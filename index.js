@@ -7,7 +7,7 @@ var jade  = require('koa-jade');
 
 var content = require('./router/content');
 var cover = require('./router/cover');
-var manager = require('/router/manager');
+var manager = require('./router/manager');
 
 // logger
 app.use(function *(next) {

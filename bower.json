@@ -9,6 +9,8 @@
   "private": true,
   "dependencies": {
     "google-code-prettify": "~1.0.3",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "font-awesome": "~4.2.0",
+    "skel": "~1.0.0"
   }
 }
