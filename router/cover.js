@@ -5,6 +5,9 @@ exports.get = function* () {
     var files = fs.readdirSync(contentPath);
     var blogs = []
     files.forEach(function(file) {
+        if(file.indexOf("git")>=0) {
+            return;
+        }
         var mtime = new Date(Date.parse(fs.statSync(contentPath + "/" + file).mtime));
         var blog = {
             "name":file.replace(".md",""),
