@@ -12,9 +12,13 @@ exports.get = function* () {
         var blog = {
             "name":file.replace(".md",""),
             "url":"/content/"+file.replace(".md",""),
+            "realtime":mtime,
             "mtime": mtime.getFullYear() + "年" + mtime.getMonth() + "月" + mtime.getDate() + "日 " + mtime.getHours() + "时"
         };
         blogs.push(blog);
+    });
+    blogs.sort(function(a,b) {
+        return b.realtime - a.realtime;
     });
     yield this.render("cover", {title:"大黑洞",blogs:blogs}, true);
 }
