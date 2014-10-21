@@ -1,0 +1,88 @@
+body {
+    background-color: #2b2e2f;
+    color: #c4d1e3;
+}
+
+a {
+    color: #c4d1e3;
+    text-decoration: none;
+}
+
+#bg {
+    background-image: url('/images/cover.jpg');
+    position: fixed;
+    height: 100%;
+}
+
+#author {
+    background-color: rgba(43, 46, 47, 0.80);
+    padding-top: 20%;
+    position: relative;
+    text-align: center;
+    height:100%;
+}
+
+#author img {
+    position: relative;
+    border-radius: 50%;
+}
+
+#name {
+    font-size: 17px;
+    margin-top:20px;
+    color: #fff;
+}
+
+#motto {
+    color: #fff;
+    font-size: 12px;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+#footer {
+    color: #fff;
+    position:absolute;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+}
+
+#powered {
+    text-align: left;
+    font-weight: bolder;
+    padding-left: 4px;
+    display: none;
+}
+
+#by {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+#by a {
+    margin: 0px 2px;
+}
+
+#by a:hover{
+    border-bottom: 1px solid #c4d1e3;
+}
+
+#link {
+    list-style-type:none;
+    padding: 0px;
+}
+
+#link li {
+    display: inline;
+}
+
+#link > li > a {
+    padding: 8px;
+    font-size: 24px;
+}
+
+#link > li > a:hover {
+    background-color: #EEE;
+    color: #333;
+}

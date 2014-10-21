@@ -1,8 +1,11 @@
 extends layout
-
+block linkcss
+    link(rel="stylesheet",href="/css/cover.css")
 block content
-    ul
-    each blog in blogs
-        li
-            a(href='#{blog.url}')= blog.name+" "+blog.mdate
+    ul#list
+        each blog in blogs
+            li
+                a(href='#{blog.url}')
+                    span.title= blog.name
+                    span.time= blog.mtime
               

@@ -5,12 +5,13 @@ exports.get = function* () {
     var files = fs.readdirSync(contentPath);
     var blogs = []
     files.forEach(function(file) {
+        var mtime = new Date(Date.parse(fs.statSync(contentPath + "/" + file).mtime));
         var blog = {
-            "name":file,
+            "name":file.replace(".md",""),
             "url":"/content/"+file.replace(".md",""),
-            "mdate":fs.statSync(contentPath + "/" + file).mtime
+            "mtime": mtime.getFullYear() + "年" + mtime.getMonth() + "月" + mtime.getDate() + "日 " + mtime.getHours() + "时"
         };
         blogs.push(blog);
     });
-    yield this.render("cover", {blogs:blogs}, true);
+    yield this.render("cover", {title:"大黑洞",blogs:blogs}, true);
 }

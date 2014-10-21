@@ -2,10 +2,40 @@ doctype html
 html
     head
         title= title
+        link(rel="stylesheet",href="/libs/skel/src/skel.css")
+        link(rel="stylesheet",href="/libs/font-awesome/css/font-awesome.min.css")
         link(rel="stylesheet",href="/css/style.css")
         block linkcss
-        meta(name="viewport",content="width=device-width,initial-scale=1.0")
-    body
-        block content
+        meta(name="viewport",content="width=device-width,initial-scale=1")
+    body.row
+        #bg.3u
+            #author
+                img(src='https://lh4.googleusercontent.com/-yqB8w8JLq1I/AAAAAAAAAAI/AAAAAAAACAU/f8UNaakIL28/s120-c/photo.jpg')
+                #name= author
+                #motto= motto
+                #footer
+                    ul#link
+                        li
+                            a(href="https://github.com/ZhangRGK")
+                                i.fa.fa-github-alt
+                        li
+                            a(href="Mailto:stamen0630@gmail.com")
+                                i.fa.fa-envelope-o
+                        li
+                            a#more(href="javascript:;")
+                                i.fa.fa-angle-down
+                    #powered Powered by:
+                        #by
+                            a(href="https://github.com") github
+                            | ,
+                            a(href="https://github.com/chjj/marked") marked
+                            | ,
+                            a(href="http://koajs.com/") koa
+                            | ,
+                            a(href="https://code.google.com/p/google-code-prettify/") Google Code Prettify
+        #main.9u.-3u
+            block content
         script(src="/libs/jquery/dist/jquery.min.js")
+        script(src="/libs/skel/src/skel.js")
+        script(src="/js/public.js")
         block jsfile

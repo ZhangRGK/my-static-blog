@@ -9,7 +9,8 @@ module.exports.get = function* () {
     if(exists) {
         var content = marked(fs.readFileSync(doc, "utf-8"));
         var stat = fs.statSync(doc);
-        yield this.render('content',{"title":fileName,"content":content,"date":stat.mtime},true);
+        var mtime = new Date(Date.parse(stat.mtime));
+        yield this.render('content',{"title":fileName,"content":content,"time":mtime.getFullYear() + "-" + mtime.getMonth() + "-" + mtime.getDate() + " " + mtime.getHours() + ":" + mtime.getMinutes()},true);
     } else {
         this.throw(404,'Blog not found.');
     }

@@ -1,3 +1,5 @@
 node_modules/
 content/
 public/libs
+.idea/
+npm-debug.log

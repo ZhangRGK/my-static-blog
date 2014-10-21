@@ -21,7 +21,11 @@ app.use(serve(__dirname + '/public'));
 app.use(jade.middleware({
     viewPath: __dirname + '/views',
     pretty: true,
-    compileDebug: false
+    compileDebug: false,
+    locals:{
+        "author": "ZhangRGK",
+        "motto": "放轻松"
+    }
 }));
 
 app.use(router(app));
