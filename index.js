@@ -7,6 +7,7 @@ var jade  = require('koa-jade');
 
 var content = require('./router/content');
 var cover = require('./router/cover');
+var manager = require('/router/manager');
 
 // logger
 app.use(function *(next) {
@@ -33,5 +34,6 @@ app.use(router(app));
 // routers
 app.get('/content/:file', content.get);
 app.get('/', cover.get);
+app.post('/manager/pull', manager.post);
 
 app.listen(3000);
