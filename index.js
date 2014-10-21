@@ -2,10 +2,11 @@ var koa = require('koa');
 var router = require('koa-router');
 var app = koa();
 
-var fs = require('fs');
-var path = require('path');
-var marked = require('marked');
+var serve = require('koa-static');
 var jade  = require('koa-jade');
+
+var content = require('./router/content');
+var cover = require('./router/cover');
 
 // logger
 app.use(function *(next) {
@@ -15,29 +16,18 @@ app.use(function *(next) {
     console.log('%s - %s %s - %s ms', this.status,this.method, this.url, ms)
 });
 
+app.use(serve(__dirname + '/public'));
+
 app.use(jade.middleware({
     viewPath: __dirname + '/views',
     pretty: true,
-    compileDebug: false,
-    basedir: 'views/layout.jade'
+    compileDebug: false
 }));
 
 app.use(router(app));
 
-app.get('/', function *() {
-    this.body = 'Hello World';
-});
-
-app.get('/content/:file', function *() {
-    var fileName = this.params.file;
-    var doc = path.normalize('./' + ['content/',fileName,'.md'].join(''));
-    var exists = fs.existsSync(doc);
-    if(exists) {
-        var content = marked(fs.readFileSync(doc, "utf-8"));
-        yield this.render('content',{"title":fileName,"content":content},true);
-    } else {
-        this.throw(404,'Blog not found.');
-    }
-});
+// routers
+app.get('/content/:file', content.get);
+app.get('/', cover.get);
 
 app.listen(3000);

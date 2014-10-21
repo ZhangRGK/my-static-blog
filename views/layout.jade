@@ -2,9 +2,10 @@ doctype html
 html
     head
         title= title
-        link(rel="stylesheet",href="/public/css/style.css")
+        link(rel="stylesheet",href="/css/style.css")
         block linkcss
         meta(name="viewport",content="width=device-width,initial-scale=1.0")
     body
         block content
+        script(src="/libs/jquery/dist/jquery.min.js")
         block jsfile

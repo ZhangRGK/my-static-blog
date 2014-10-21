@@ -1,0 +1,14 @@
+{
+  "name": "blog",
+  "main": "index.js",
+  "version": "0.0.1",
+  "authors": [
+    "keen"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "google-code-prettify": "~1.0.3",
+    "jquery": "~2.1.1"
+  }
+}

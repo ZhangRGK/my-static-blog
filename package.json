@@ -17,6 +17,7 @@
     "koa-error": "^1.1.2",
     "koa-jade": "^0.3.1",
     "koa-router": "^3.4.0",
+    "koa-static": "^1.4.7",
     "marked": "^0.3.2"
   },
   "devDependencies": {

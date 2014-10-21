@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    ul
+    each blog in blogs
+        li
+            a(href='#{blog.url}')= blog.name+" "+blog.mdate
+              
