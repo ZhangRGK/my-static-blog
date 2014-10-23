@@ -13,7 +13,7 @@ exports.get = function* () {
             "name":file.replace(".md",""),
             "url":"/content/"+file.replace(".md",""),
             "realtime":mtime,
-            "mtime": mtime.getFullYear() + "年" + mtime.getMonth() + "月" + mtime.getDate() + "日 " + mtime.getHours() + "时"
+            "mtime": mtime.getFullYear() + "年" + (mtime.getMonth()+1) + "月" + mtime.getDate() + "日 " + mtime.getHours() + "时"
         };
         blogs.push(blog);
     });
