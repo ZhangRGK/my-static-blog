@@ -3,6 +3,10 @@
     list-style-type:none;
 }
 
+#list > li {
+    padding-bottom: 6px;
+}
+
 #list a:hover {
     padding: 3px 0px;
     border-bottom: 1px solid #c4d1e3;
