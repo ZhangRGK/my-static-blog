@@ -3,3 +3,22 @@ pre.prettyprinted {
     border-radius: 3px;
     padding:8px;
 }
+
+nav {
+    background: rgba(255,255,255,0.6);
+    position: fixed;
+    top:0px;
+    right: 40px;
+    padding: 4px 0px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+nav > span {
+    padding: 0px 7px;
+    color: #1C1C1C;
+    border-right: 1px solid #000000;
+}
+
+nav > span:last-child {
+    border-right: 0px;
+}
