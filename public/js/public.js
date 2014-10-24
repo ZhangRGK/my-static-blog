@@ -10,4 +10,23 @@ $(function() {
             $("#powered").slideUp();
         }
     });
+
+    skel.init({
+        reset: 'normalize',
+        containers: '100%',
+        breakpoints: {
+            small: {
+                media: '(max-width: 1024px)',
+                grid: {
+                    collapse: true
+                }
+            }
+        }
+    });
+    $(document).on("resize",function() {
+        console.log(skel.isActive("medium"));
+        if (skel.isActive('small') || skel.isActive("medium")) {
+            $("#main").removeClass("-3u");
+        }
+    });
 });

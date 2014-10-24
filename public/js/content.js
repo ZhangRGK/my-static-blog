@@ -18,4 +18,14 @@ $(function() {
             });
         nav.append(span);
     });
+    console.log($("nav").height());
+    $("#content").css("padding-top",$("nav").height());
+
+    $(window).on("scroll",function() {
+        if($(window).scrollTop() >= $("#content").offset().top) {
+            $("nav").addClass("fixed");
+        } else {
+            $("nav").removeClass("fixed");
+        }
+    });
 });

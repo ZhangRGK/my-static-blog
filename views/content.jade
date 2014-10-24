@@ -2,16 +2,16 @@ extends layout
 block linkcss
     link(rel="stylesheet",href="/css/tomorrow.css")
     link(rel="stylesheet",href="/css/content.css")
+    link(rel="stylesheet",href="/css/content-small.css",media="(max-width: 1024px)")
 block content
-    h1= title
-    div
-        | #{author} #{time}
-    hr
-    nav
-        span
-            a#top(href="javascript:;")
-                i.fa.fa-arrow-circle-o-up
     #content
+        h1= title
+        div
+            | #{author} #{time}
+        hr
+        nav
+            span#top
+                i.fa.fa-arrow-circle-o-up
         | !{content}
 block jsfile
     script(src="/libs/google-code-prettify/bin/prettify.min.js")
