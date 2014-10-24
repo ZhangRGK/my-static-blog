@@ -22,7 +22,7 @@ $(function() {
             });
         nav.append(span);
     });
-    console.log($("nav").height());
+
     $("#content").css("padding-top",$("nav").height());
 
     $(window).on("scroll",function() {
