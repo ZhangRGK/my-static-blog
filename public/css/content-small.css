@@ -22,10 +22,6 @@ nav.fixed {
     top:0px;
 }
 
-#top {
-    float: right;
-}
-
 nav > span {
     padding: 0px 7px;
     color: #1C1C1C;

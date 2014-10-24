@@ -8,6 +8,10 @@ $(function() {
         $("body").animate({scrollTop:0}, '500', 'swing');
     });
 
+    $("#back").on("click", function() {
+        window.location.href = "/";
+    });
+
     $("h2").each(function(index,node) {
         $(node).before("<a id='"+index+"'>");
         var span = document.createElement('span');
